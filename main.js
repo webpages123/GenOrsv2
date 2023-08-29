@@ -75,6 +75,10 @@ function crearOr(input,i){
         resultOr = resultOr.replace(/<!-- <otm:FixedItineraryGid>/g,'<otm:FixedItineraryGid>',"gi");     
         resultOr = resultOr.replace(/FixedItineraryGid> -->/g,'FixedItineraryGid>',"gi");
     }
+    if(input[i].hasOwnProperty('ORDER_TYPE')){
+        resultOr = resultOr.replace(/<!--<otm:ReleaseTypeGid>/g,'<otm:ReleaseTypeGid> ',"gi");     
+        resultOr = resultOr.replace(/otm:ReleaseTypeGid> -->/g,'otm:ReleaseTypeGid> ',"gi");
+    }
     resultOr = resultOr.replace(/#origen/g,input[i].SOURCE,"gi");
     resultOr = resultOr.replace(/#tipoorden/g,input[i].ORDER_TYPE,"gi");
     resultOr = resultOr.replace(/#config/g,input[i].ORDER_CONFIG,"gi");
