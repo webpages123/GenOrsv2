@@ -138,7 +138,12 @@ function crearTodas(input){
                 });   
             };
             fileReader.readAsBinaryString(selectedFile);             
-        }
+        } 
+        setInterval(() => {
+            if(aux[0].length>0){
+                document.getElementById("uploadExcel").innerHTML = 'Upload Excel ✔'
+            }
+        }, 500);
         });
         var datos = aux[0];
     //Fin de subida de datos en Excel
