@@ -139,9 +139,9 @@ function crearTodas(input){
             };
             fileReader.readAsBinaryString(selectedFile);             
         } 
-        setInterval(() => {
+        setTimeout(() => {
             if(aux[0].length>0){
-                document.getElementById("uploadExcel").innerHTML = 'Upload Excel ✔'
+                document.getElementById("uploadExcel").innerHTML = 'Uploaded ✔'
             }
         }, 500);
         });
